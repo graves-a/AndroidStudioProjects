@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:useDefaultMargins="true"
+    android:columnCount="2">
+
+    <TextView
+        android:textSize="30sp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/please_login" />
+    <TextView
+        android:text="@string/username" />
+    <EditText
+        android:layout_gravity="fill_horizontal" />
+    <TextView
+        android:text="@string/password" />
+    <EditText
+        android:layout_gravity="fill_horizontal"
+        android:inputType="textPassword" />
+
+    <Button
+        android:layout_column="1"
+        android:layout_gravity="right"
+        android:text="@string/login" />
+    <Button
+        android:layout_column="1"
+        android:layout_gravity="right"
+        android:text="@string/create_account" />
+</GridLayout>

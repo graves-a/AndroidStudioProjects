@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Inventory App</string>
+    <string name="please_login">Please login:</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="login">Login</string>
+    <string name="invalid">Invalid username or password</string>
+    <string name="create_account">Create account</string>
+</resources>
