@@ -5,11 +5,21 @@
         <item>The Beatles</item>
         <item>Nirvana</item>
         <item>U2</item>
+        <item>Lil' Wayne</item>
+        <item>Da Baby</item>
+        <item>Childish Gambino</item>
+        <item>Cardi B</item>
+        <item>Logic</item>
+
     </string-array>
 
     <string-array name="descriptions">
         <item>An English rock band that formed in Liverpool in 1960.</item>
         <item>An American rock band that formed in Washington in 1987</item>
         <item>An Irish rock band from Dublin that formed in 1976</item>
+        <item>Hip Hop artist Lil' Wayne....NEED TO FINISH</item>
+        <item>Hip Hop artist Childish Gambino....NEED TO FINISH</item>
+        <item>Hip Hop artist Cardi B....NEED TO FINISH</item>
+        <item>Hip Hop artist Logic....NEED TO FINISH</item>
     </string-array>
 </resources>
