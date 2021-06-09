@@ -1,15 +1,19 @@
 package com.zybooks.diceroller;
 
 import android.graphics.drawable.Drawable;
+import android.hardware.Sensor;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements RollLengthDialogFragment.OnRollLengthSelectedListener {
