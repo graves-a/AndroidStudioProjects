@@ -1,0 +1,2 @@
+rootProject.name = "Alan Graves Inventory"
+include ':app'
