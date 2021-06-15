@@ -1,19 +1,22 @@
 package com.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     final String TAG = "demo";
-    ListView listView;
     ArrayList<User> users = new ArrayList<>();
-    ArrayAdapter<User> adapter;
+    LinearLayoutManager layoutManager;
+    UserRecyclerViewAdapter adapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +29,13 @@ public class MainActivity extends AppCompatActivity {
         users.add(new User("Tom White", 28));
         users.add(new User("Eve Green", 30));
 
-        listView = findViewById(R.id.listView);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, users);
-        listView.setAdapter(adapter);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
 
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new UserRecyclerViewAdapter(users);
+        recyclerView.setAdapter(adapter);
 
 
     }

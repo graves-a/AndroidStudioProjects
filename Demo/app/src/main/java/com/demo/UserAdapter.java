@@ -1,4 +1,4 @@
-package com.alangravesinventory;
+package com.demo;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -23,16 +23,23 @@ public class UserAdapter extends ArrayAdapter<User> {
 
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.user_row_item, parent, false);
+            ViewHolder viewHolder = new ViewHolder();
+            viewHolder.textViewName = convertView.findViewById(R.id.textViewName);
+            viewHolder.textViewAge = convertView.findViewById(R.id.textViewAge);
+            convertView.setTag(viewHolder);
         }
 
         User user = getItem(position);
+        ViewHolder viewHolder = (ViewHolder)convertView.getTag();
 
-        TextView textViewName = convertView.findViewById(R.id.textViewName);
-        TextView textViewAge = convertView.findViewById(R.id.textViewAge);
-
-        textViewName.setText(user.name);
-        textViewAge.setText(user.age + " Years Old");
+        viewHolder.textViewName.setText(user.name);
+        viewHolder.textViewAge.setText(user.age + " Years Old");
 
         return convertView;
+    }
+
+    private static class ViewHolder {
+        TextView textViewName;
+        TextView textViewAge;
     }
 }

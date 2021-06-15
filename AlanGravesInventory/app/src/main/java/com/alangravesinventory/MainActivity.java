@@ -1,21 +1,18 @@
 package com.alangravesinventory;
 
-import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     final String TAG = "demo";
-    ListView listView;
-    ArrayList<User> users = new ArrayList<>();
-    UserAdapter adapter;
-
+    ArrayList<Item> items = new ArrayList<>();
+    LinearLayoutManager layoutManager;
+    ItemRecyclerViewAdapter adapter;
     RecyclerView recyclerView;
 
     @Override
@@ -23,16 +20,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Test entries to check UI
-        users.add(new User("Bananas", 29));
-        users.add(new User("Strawberries", 19));
-        users.add(new User("Apples", 32));
-        users.add(new User("Watermelons", 44));
-        users.add(new User("Carrots", 27));
+        items.add(new Item("Bananas", 25));
+        items.add(new Item("Watermelons", 30));
+        items.add(new Item("Apples", 40));
+        items.add(new Item("Strawberries", 45));
+        items.add(new Item("Coconuts", 50));
 
-        listView = findViewById(R.id.listView);
-        adapter = new UserAdapter(this, R.layout.user_row_item, users);
-        listView.setAdapter(adapter);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new ItemRecyclerViewAdapter(items);
+        recyclerView.setAdapter(adapter);
 
 
     }

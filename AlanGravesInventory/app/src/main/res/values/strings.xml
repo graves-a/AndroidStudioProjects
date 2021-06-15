@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Alan Graves Inventory</string>
+    <string name="login">LOGIN</string>
+    <string name="create_account">Create Account</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
 </resources>

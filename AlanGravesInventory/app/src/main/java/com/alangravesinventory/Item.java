@@ -1,16 +1,16 @@
 package com.alangravesinventory;
 
-public class User {
+public class Item {
     public String name;
-    int age;
+    int count;
 
-    public User(String name, int age) {
+    public Item(String name, int count) {
         this.name = name;
-        this.age = age;
+        this.count = count;
     }
 
     @Override
     public String toString() {
-        return name + " " + age;
+        return name;
     }
 }
